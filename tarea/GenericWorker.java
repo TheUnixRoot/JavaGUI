@@ -53,9 +53,9 @@ public abstract class GenericWorker extends SwingWorker<List<Primos>, Void> {
         int nPrimos = 0;
         int src = 2;
         while (nPrimos < n && !this.isCancelled()) {
-            if (esPrimo(src) && esPrimo(src + 2)) {
+            if (esPrimo(src) && esPrimo(src + k)) {
                 nPrimos++;
-                lista.add(new Primos(src, src + 2, nPrimos));
+                lista.add(new Primos(src, src + k, nPrimos));
             }
             src++;
         }
